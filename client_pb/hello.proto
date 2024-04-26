@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "grpc-demo/client_pb";
+
+package pb;
+
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloResponse) {}
+}
+
+message HelloRequest {
+  int64 name = 1;
+}
+
+message HelloResponse {
+  string reply = 1;
+}
